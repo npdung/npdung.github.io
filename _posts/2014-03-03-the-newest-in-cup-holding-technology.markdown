@@ -1,9 +1,15 @@
 ---
 layout: post
-title:  "The newest in cup holding technology"
-date:   2014-03-03
+title:  "Test Markdown"
+date:   2014-01-16
 tags: instagram
 comments: true
 ---
+# HEADING 1
+## HEADING 2
+### HEADING 3
 
-<iframe src="//instagram.com/p/lFYzoZIqh5/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+*   A list item with a blockquote:
+
+    > This is a blockquote
+    > inside a list item.

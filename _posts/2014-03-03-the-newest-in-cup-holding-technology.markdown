@@ -5,4 +5,6 @@ date:   2014-03-03
 tags: instagram
 comments: true
 ---
-
+*Italic*
+**Bold**
+[Google](google.com)

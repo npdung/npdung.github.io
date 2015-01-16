@@ -6,9 +6,7 @@ tags: instagram
 comments: true
 ---
 # Heading 1
-*Italic*
-
+*Italic*  
 **Bold**
-
 [Google](http://google.com)
 

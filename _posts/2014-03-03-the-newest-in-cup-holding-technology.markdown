@@ -8,4 +8,6 @@ comments: true
 *Italic*
 **Bold**
 [Google](http://google.com)
-![Apple](http://laodong.com.vn/Uploaded/phamthuhien/2014_12_19/3_WDVX.jpg)
+#chuong 1
+## Muc 1
+### muc 1.1

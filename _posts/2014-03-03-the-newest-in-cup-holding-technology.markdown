@@ -8,3 +8,4 @@ comments: true
 *Italic*
 **Bold**
 [Google](http://google.com)
+![car](http://dreamatico.com/data_images/car/car-7.jpg)

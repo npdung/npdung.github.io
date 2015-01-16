@@ -7,4 +7,4 @@ comments: true
 ---
 *Italic*
 **Bold**
-[Google](google.com)
+[Google](http://google.com)

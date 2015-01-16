@@ -6,4 +6,3 @@ tags: instagram
 comments: true
 ---
 
-<iframe src="//instagram.com/p/lFYzoZIqh5/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>

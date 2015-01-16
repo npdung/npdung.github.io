@@ -5,10 +5,10 @@ sass:
   sass_dir: assets/css/_sass
   style: :compressed
 
-# url: http://nadjetey.github.io
+# url: http://npdung.github.io
 
 owner:
-    name: Nii Adjetey Sowah
+    name: Nguyen Phan Dung
     twitter: #
     github: #
     disqus_shortname: #

@@ -7,6 +7,6 @@ comments: true
 ---
 # Heading 1
 *Italic*  
-**Bold** 
+**Bold**  
 [Google](http://google.com) 
 

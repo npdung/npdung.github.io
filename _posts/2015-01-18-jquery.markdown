@@ -1,0 +1,171 @@
+---
+layout: post
+title:  "Jquery for BEGINNERS"
+date:   2015-01-18
+tags: instagram
+comments: true
+---
+# **SOMETHING NEED REMEMBERS WHEN USING JQUERY FOR BEGINNERS** #
+
+***
+**Note:** jQuery methods should be place in
+
+	$(document).ready(function(){
+
+   		// jQuery methods go here...
+
+	});
+
+});
+
+This is to prevent any jQuery code from running before the document is finished loading (is ready).
+
+### 1. jQuery Selectors ###
+    $(this)     	Selects the current HTML element
+	$("#test")		Selects the element with id="test"
+	$(".test")		Selects the elements with class="test"
+
+### 2. jQuery Events ###
+1.  **click:** The function is executed when the user clicks on the HTML element.
+
+		$(selector).click(function(){
+  			//function go here ...
+		});
+2.  **hover:** The hover() method takes two functions.
+The first function is executed when the mouse enters the HTML element. The second function is executed when the mouse leaves the HTML element.
+
+		$("selector").hover(function(){
+  			  // first function go here ...
+  		    },
+  		    function(){
+  			  // second function go here ...
+		});
+
+### 3. jQuery Effects ###
+1.	**hide:** hide HTML elements.
+		
+  		$(selector).hide();
+2.	**show:** show HTML elements.
+
+		$(selector).show();
+3.	**fadeIn:** fade an element in of visibility.
+
+		$(selector).fadeIn();
+4.	**fadeOut:** fade an element out of visibility.
+
+		$(selector).fadeOut();
+### 4. jQuery HTML ###
+1.	**jQuery Get / Set:** have 3 method:
+	- text() -  Sets or Gets the text content of selected elements
+ 	- html() - Sets or Gets the content of selected elements (including HTML markup)
+ 	- val() - Sets or returns the value of form fields
+
+			GET:	
+				$("selector").text();
+				$("selector").html();
+				$("selector").val();
+			set: 	
+				$("selector").text("value here ...");
+				$("selector").html("value here ...");
+				$("selector").html("value here ...");
+
+---
+# **ADVANCED (LIST NAME AND DESCRIPTION OF METHODS)** #
+### 1. jQuery Selectors ###
+
+	Syntax						|	Description
+	-----------------------------------------------------------------------------------------------------
+	$("*")						|	Selects all elements
+	$(this) 					|	Selects the current HTML element
+	$("p.intro")				|	Selects all <p> elements with class="intro"
+	$("p:first")				|	Selects the first <p> element	
+	$("ul li:first")			|	Selects the first <li> element of the first <ul>	
+	$("ul li:first-child")		|	Selects the first <li> element of every <ul>	
+	$("[href]")					|	Selects all elements with an href attribute	
+	$("a[target='_blank']")		|	Selects all <a> elements with a target attribute value equal to "_blank"
+	$("a[target!='_blank']")	|	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+	$(":button")				|	Selects all <button> elements and <input> elements of type="button"
+	$("tr:even")				|	Selects all even <tr> elements	
+	$("tr:odd")					|	Selects all odd <tr> elements
+
+### 2. jQuery Events ###
+
+	Name			|	Description
+	-----------------------------------------------------------------------------------------------------
+	click()			|	The function is executed when the user clicks on the HTML element
+	dblclick() 		|	The function is executed when the user double-clicks on the HTML element
+	mouseenter()	|	The function is executed when the mouse pointer enters the HTML element
+	mouseleave()	|	The function is executed when the mouse pointer leaves the HTML element
+	mousedown()		|	The function is executed, when the left mouse button is pressed down, while the mouse is over the HTML element
+	mouseup()		|	The function is executed, when the left mouse button is released, while the mouse is over the HTML element
+	hover()			|	The hover() method takes two functions. The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element
+	focus()			|	The function is executed when the form field gets focus
+	blur()			|	The function is executed when the form field loses focus
+
+### 3. jQuery Effects ###
+
+	Name			|	Description
+	-----------------------------------------------------------------------------------------------------
+	hide()			|	hide HTML elements
+	show()	 		|	show HTML elements
+	toggle()		|	toggle between the hide() and show() methods with the toggle() method
+	fadeIn()		|	fade in a hidden element.
+	fadeOut()		|	fade out a visible element.
+	fadeToggle()	|	toggles between the fadeIn() and fadeOut() methods.
+	fadeTo()		|	fading to a given opacity (value between 0 and 1).
+	slideDown()		|	slide down an element.
+	slideUp()		|	slide up an element.
+	slideToggle()	|	toggles between the slideDown() and slideUp() methods.
+	animate()		|	create custom animations.
+	stop()			|	stop animations or effects before it is finished.
+	
+### 4. jQuery HTML ###
+
+	Name			|	Description
+	-----------------------------------------------------------------------------------------------------
+	text()			|	Sets or returns the text content of selected elements
+	html()	 		|	Sets or returns the content of selected elements (including HTML markup)
+	val() 			|	Sets or returns the value of form fields
+	attr()			|	set/change attribute values.
+	append() 		|	Inserts content at the end of the selected elements
+	prepend() 		|	Inserts content at the beginning of the selected elements
+	after() 		|	Inserts content after the selected elements
+	before() 		|	Inserts content before the selected elements
+	remove()		|	Removes the selected element (and its child elements)
+	empty() 		|	Removes the child elements from the selected element
+	addClass() 		|	Adds one or more classes to the selected elements
+	removeClass()	|	Removes one or more classes from the selected elements
+	toggleClass()	|	Toggles between adding/removing classes from the selected elements
+	css()			|	Sets or returns the style attribute
+
+
+### 5. jQuery Traversing ###
+	Name			|	Description
+	-----------------------------------------------------------------------------------------------------
+	children() 		|	returns all direct children of the selected element.
+	The find() 		|	returns descendant elements of the selected element, all the way down to the last descendant.
+	siblings() 		|	returns all sibling elements of the selected element.
+	next()			|	returns the next sibling element of the selected element.
+	nextAll()		|	returns all next sibling elements of the selected element.
+	nextUntil() 	|	returns all next sibling elements between two given arguments.
+	prev()			|	returns the previous sibling element of the selected element.
+	prevAll()		|	returns the previous sibling element of the selected element.
+	prevUntil()		|	returns all previous sibling elements between two given arguments.
+	first() 		|	returns the first element of the selected elements.
+	last()  		|	returns the last element of the selected elements.
+	eq() 			|	returns an element with a specific index number of the selected elements.
+	filter()		|	specify a criteria. Elements that do not match the criteria are removed from the selection, and those that match will be returned.
+	not()			|	returns all elements that do not match the criteria.
+
+### 5. jQuery AJAX ###
+
+	Name			|	Description
+	-----------------------------------------------------------------------------------------------------
+	load() 			|	loads data from a server and puts the returned data into the selected element.
+	$.get()	 		|	requests data from the server with an HTTP GET request.
+	$.post()		|	requests data from the server using an HTTP POST request.
+
+
+ **I hope this post was useful for you**
+
+References: [http://www.w3schools.com/jquery/default.asp](http://www.w3schools.com/jquery/default.asp "http://www.w3schools.com/jquery/default.asp")

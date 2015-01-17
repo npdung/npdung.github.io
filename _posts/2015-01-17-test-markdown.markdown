@@ -9,7 +9,7 @@ comments: true
 ## HEADING 2
 ### HEADING 3
 ***
-[Week1](https://github.com/npdung/Week1)
+[Week1](http://github.com/npdung/Week1)
 
 ***
 *   A list item with a blockquote:

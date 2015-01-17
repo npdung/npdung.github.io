@@ -6,8 +6,8 @@ tags: instagram
 comments: true
 ---
 # HEADING 1
-##** HEADING 2
-###* HEADING 3
+## ** HEADING 2
+### * HEADING 3
 ***
 [Week1](http://github.com/npdung/Week1)
 

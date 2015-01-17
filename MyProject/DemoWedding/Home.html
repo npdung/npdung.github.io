@@ -1,0 +1,1102 @@
+<html>
+<head>
+  <meta charset="UTF8">
+  <link rel="stylesheet" type="text/css" href="css/stylecss.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="css/full-slider.css">
+  <link rel="stylesheet" type="text/css" href="css/slide-menu-css.css">
+  <link rel="stylesheet" type="text/css" href="css/dropdown-menu-css.css">
+  <script src="js/jquery-2.0.0.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $boxTwo = $('#tool_customization');
+      $flag = "show";
+
+      $('#toggleButton').on('click', function() {
+        if($flag == "show")
+        {
+          $flag = "hide";
+          $(this).removeClass('showSlideMenu');
+          $(this).addClass('hideSlideMenu');
+          $boxTwo.removeClass('showSlideMenu');
+          $boxTwo.addClass('hideSlideMenu');
+        } else {
+          $flag = "show";
+          $(this).removeClass('hideSlideMenu');
+          $(this).addClass('showSlideMenu');
+          $boxTwo.removeClass('hideSlideMenu');
+          $boxTwo.addClass('showSlideMenu');
+        }
+      });
+
+
+      $(document).ready(function () {
+        $menu = $('.top-menu');
+        $origOffsetY = $menu.offset().top;
+
+        function scroll() {
+          if ($(window).scrollTop() >= $origOffsetY) {
+            $menu.addClass('navbar-fixed-top');
+
+          } else {
+            $menu.removeClass('navbar-fixed-top');
+          }
+        }
+        document.onscroll = scroll;
+      });
+    });
+	
+	$(document).ready(function(){
+		  $menuDropdownHover = "false";
+		  $(".new-dropdown-menu").hover(function(){
+				$num = $("new-dropdown-menu").index(this);
+				$temp = $(".menu-dropdowned").eq($num);
+				$temp.stop( true, true ).fadeIn(1200);			
+		  }, function(){
+			    setTimeout(function(){
+					if ($menuDropdownHover == "false")
+					{
+						$num = $("new-dropdown-menu").index(this);
+						$temp = $(".menu-dropdowned").eq($num);
+						$temp.stop( true, true ).fadeOut(1200);
+						$menuDropdownHover = "false";
+					}
+				},1200);
+			});
+		  $(".new-dropdown-menu").mouseenter(function(){
+			  	$menuDropdownHover = "true";
+		  });
+		  $(".new-dropdown-menu").mouseleave(function(){
+			  	$menuDropdownHover = "false";
+		  });
+		  	
+		  $(".menu-dropdowned").hover(function(){
+				$menuDropdownHover = "true";
+		  }, function(){
+			  	setTimeout(function(){
+					if ($menuDropdownHover == "false")
+					{
+						$num = $("new-dropdown-menu").index(this);
+						$temp = $(".menu-dropdowned").eq($num);
+						$temp.stop( true, true ).fadeOut(1200);
+						$menuDropdownHover = "false";
+					}
+				},1200);
+		  });
+		  $(".menu-dropdowned").mouseenter(function(){
+			  	$menuDropdownHover = "true";
+		  });
+		  $(".menu-dropdowned").mouseleave(function(){
+			  	$menuDropdownHover = "false";
+		  });
+	});	
+</script>
+</head>
+
+<body>
+
+	<!-- Header !-->
+	<div class = "header-container">
+    <div class="nav-header">
+      <div class="container">
+        <div class="row">
+          <ul id="head-left">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">SITEMAP</a></li>
+            <li><a href="#">SIGN IN</a></li>
+            <li><a href="#">YOUR ACCOUNT</a></li>
+          </ul>
+          <div id="head-right">
+            <select>
+              <option value="Dollar">ENGLISH</option>
+              <option value="DEUTSCH">DEUTSCH</option>
+              <option value="RUSSIAN">RUSSIAN</option>
+              <option value="ESPANOL">ESPANOL</option>
+              <option value="FRANCIS">FRANCIS</option>
+            </select>
+            <select>
+              <option value="Dollar">USD</option>
+              <option value="Euro">EUR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "header-bar">
+     <div class="container">
+       <div class="row">
+         <div class="logo">
+           <a href="http://livedemo00.template-help.com/prestashop_50521/" title="Wedding store">
+            <img class="logo img-responsive" src="http://livedemo00.template-help.com/prestashop_50521/img/new-store-1403169984.jpg" alt="Wedding store" width="271" height="73"/>
+          </a>
+        </div>
+        <div style="float:right;">
+            <div class="search">
+             <form action="#" method="get">
+               <input class="input-search" type="text" />
+               <button class="button-search" >
+                 <div class="glyphicon glyphicon-search"></div>
+               </button>
+             </form>
+           </div>
+
+           <div class = "cart" style="color:white;">
+             <div class="glyphicon glyphicon-shopping-cart myCart">
+               Cart (empty)
+             </div>
+           </div>
+       </div>
+     </div>
+
+   </div>
+ </div>
+ <div class="top-menu" style="width:100%; background-color:white;">
+    <div class="row">
+    <div class ="my-dropdown-menu container">
+      <ul id="list-top-menu">
+        <li><a href="#" class="new-dropdown-menu">NEW</a>
+        	  <div class="menu-dropdowned" >
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <h5><a href="">Aliquam congue</a></h5>
+                          <ul>
+                            <li><a href="">Vestibulum iaculis</a></li>
+                            <li><a href="">Lacinia est</a></li>
+                            <li><a href="">Proin dictum</a></li>
+                            <li><a href="">Elementum velit</a></li>
+                            <li><a href="">Consequat ante</a></li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-2">
+                      <h5><a href="">Pellentesque sed</a></h5>
+                          <ul>
+                            <li><a href="">Vestibulum iaculis</a></li>
+                            <li><a href="">Lacinia est</a></li>
+                            <li><a href="">Proin dictum</a></li>
+                            <li><a href="">Elementum velit</a></li>
+                            <li><a href="">Consequat ante</a></li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-2">
+                    	 <h5><a href="">Enim adipiscing</a></h5>
+                           <ul>
+                            <li><a href="">Vestibulum iaculis</a></li>
+                            <li><a href="">Lacinia est</a></li>
+                            <li><a href="">Proin dictum</a></li>
+                            <li><a href="">Elementum velit</a></li>
+                            <li><a href="">Consequat ante</a></li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-2">
+                    	<h5><a href="">Aliquet sit amet</a></h5>                      
+                           <ul>
+                            <li><a href="">Vestibulum iaculis</a></li>
+                            <li><a href="">Lacinia est</a></li>
+                            <li><a href="">Proin dictum</a></li>
+                            <li><a href="">Elementum velit</a></li>
+                            <li><a href="">Consequat ante</a></li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-2">
+                    	<h5><a href="">Elliptical Trainers</a></h5>
+                           <ul>
+                            <li><a href="">Vestibulum iaculis</a></li>
+                            <li><a href="">Lacinia est</a></li>
+                            <li><a href="">Proin dictum</a></li>
+                            <li><a href="">Elementum velit</a></li>
+                            <li><a href="">Consequat ante</a></li>
+                          </ul>
+                    </div>
+                  </div>
+            </div>
+            </div>
+        </li>
+        <li><a href="#">BRIDE</a></li>
+        <li><a href="#">JEWELRY</a></li>
+        <li><a href="#">BRIDAL PARTY & GUESTS</a></li>
+        <li><a href="#">SHOES & ACCESSORIES</a></li>
+        <li><a href="#">LINGERIE</a></li>
+        <li><a href="#">DECOR</a></li>
+        <li><a href="#">GIFTS</a></li>
+        <li><a href="#">SALE</a></li>
+      </ul>
+      </div>
+    </div>
+</div>
+<div class="home-slider">
+  <div class ="container">
+    <div class="row">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators" style="left:15%;">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner box-slide" role="listbox">
+          <div class="item active">
+            <img src="image/1.jpg" />
+            <div class="carousel-caption myCaption" style="left:-50%; top: 5%;">
+              <h1>NEW</h1>
+              <h2>2014</h2>
+              <h3>collection</h3>
+              <p>
+                <button>shop now</button>
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/2.jpg" />
+            <div class="carousel-caption myCaption" style="left:-50%; top: 5%;">
+              <h1>CREATE</h1>
+              <h2>your</h2>
+              <h3>wedding style!</h3>
+              <p>
+                <button>shop now</button>
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/3.jpg" />
+            <div class="carousel-caption myCaption" style="left:-50%; top: 5%;">
+              <h1>NEW</h1>
+              <h2>arrivals</h2>
+              <h3>from top brands</h3>
+              <p>
+                <button>shop now</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- End Header !-->
+<div style="background-color:#666 ; opacity: 0.5 ;  width:100%;  height:1px; margin-top:50px;">
+</div>
+
+<!-- Main !-->
+<div class = "main-container">
+  <!-- Slide Menu !-->
+  <div style="left: 0px;" id="tool_customization">
+    <p>
+      The customization tool allows you to make color and font changes in your theme.<br><br>
+      <span>
+        Only you can see this tool (as you are currently logged as a merchant in your Back-office); your visitors will not see this tool.
+      </span>
+    </p>
+
+    <div class="list-tools">
+      <p id="theme-title">
+        Color theme
+        <i class="icon-caret-down pull-right"></i>
+      </p>
+    </div>
+
+    <ul id="color-box">
+      <li class="theme1">
+        <div class="color-theme1 color1"></div>
+        <div class="color-theme2 color2"> </div>
+      </li>
+      <li class="theme2">
+        <div class="color-theme1 color1"></div>
+        <div class="color-theme2 color2"> </div>
+      </li>
+      <li class="theme3">
+        <div class="color-theme1 color1"></div>
+        <div class="color-theme2 color2"> </div>
+      </li>
+      <li class="theme4">
+        <div class="color-theme1 color1"></div>
+        <div class="color-theme2 color2"> </div>
+      </li>
+      <li class="theme5">
+        <div class="color-theme1 color1"></div>
+        <div class="color-theme2 color2"> </div>
+      </li>
+    </ul>
+
+    <div class="list-tools">
+      <p id="font-title">
+        Font
+        <i class="icon-caret-down pull-right"></i>
+      </p>
+    </div>
+
+    <div id="font-box">
+      <p>Title font</p>
+      <select name="font" id="font" class="font-list">
+        <option value="">Choose a font</option>
+        <option value="font1">Open Sans</option>
+        <option value="font2">Josefin Slab</option>
+        <option value="font3">Arvo</option>
+        <option value="font4">Lato</option>
+        <option value="font5">Volkorn</option>
+        <option value="font6">Abril Fatface</option>
+        <option value="font7">Ubuntu</option>
+        <option value="font8">PT Sans</option>
+        <option value="font9">Old Standard TT</option>
+        <option value="font10">Droid Sans</option>
+      </select>
+    </div>
+    <div class="btn-tools">
+      <button type="button" class="btn btn-1" id="reset" name="resetLiveConfigurator">Reset</button>
+      <a type="button" class="btn btn-1" id="quit" name="quitLiveConfigurator" href="http://livedemo00.template-help.com/prestashop_50521/">Quit</a>
+    </div>
+  </div>
+
+  <div id='toggleButton' class="glyphicon glyphicon-cog" ></div>
+  <!-- End Slide Menu !-->
+  <!-- Tab Menu !-->
+  <div class="home-tab-menu">
+    <div class ="container">
+      <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#new-arrivals" aria-controls="new-arrivals" role="tab" data-toggle="tab">NEW ARRIVALS</a></li>
+          <li role="presentation"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab">POPULAR</a></li>
+          <li role="presentation"><a href="#best-sellers" aria-controls="best-sellers" role="tab" data-toggle="tab">BEST SELLERS</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content items-in-tab">
+          <ul role="tabpanel" class="tab-pane active row" id="new-arrivals">
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item1.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">14K Two Tone Gold...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item2.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">14K Yellow Gold...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item3.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Beach Wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item4.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Bridesmaid wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item5.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Butterflies Laser-Cut...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item6.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Butterfly Themed...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item7.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Calla Lily Bouquet...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item8.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Cerelia - Wedding Dress</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item9.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Chiffon Flower Girl...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item10.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Crystal Wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item11.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Silk Rapture Rose Sash</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item12.jpg"/></a>
+              <div class="title-item-in-tab">
+                 <a href="#">The Kensington Ring...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            
+          </ul>
+          <div role="tabpanel" class="tab-pane" id="popular">
+          	 <ul role="tabpanel" class="tab-pane active row" id="new-arrivals">
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item8.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Cerelia - Wedding Dress.</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item6.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Butterfly Themed...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item5.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Butterflies Laser-Cut...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item10.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Crystal Wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item3.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Beach Wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item7.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Calla Lily Bouquet...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item1.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">14K Two Tone Gold...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item12.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">The Kensington Ring...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item11.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Silk Rapture Rose Sash</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item2.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">14K Yellow Gold...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item4.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Bridesmaid wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item9.jpg"/></a>
+              <div class="title-item-in-tab">
+                 <a href="#">Chiffon Flower Girl...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            
+          </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="best-sellers">
+          	 <ul role="tabpanel" class="tab-pane active row" id="new-arrivals">
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item4.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Bridesmaid wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item2.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">14K Yellow Gold...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item3.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Beach Wedding...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item6.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Butterflies Laser-Cut...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item7.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Calla Lily Bouquet...</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-3">
+              <a href="#"><img class="img-responsive replace-2x" src="image/item8.jpg"/></a>
+              <div class="title-item-in-tab">
+                <a href="#">Cerelia - Wedding Dress</a>
+              </div>
+              <div style="float:left;margin-left:30%;">
+              <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+              </div>
+              </div>
+
+              <div class="describ-item-in-tab">
+                When you ask a woman about the most memorable days of her life, she will...
+              </div>
+              <div class="price-item-in-tab">$1,710.94</div>
+              <button class="add-item-to-cart">add to cart</button>
+            </li>            
+          </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--End Tab Menu !-->
+
+
+  <!-- Bottom Tab Menu !-->
+  <div class="container">
+    <div class="row">
+      <div id="facebook_block" class="col-sm-4 col-xs-12">
+        <h4>FOLLOW US ON FACEBOOK</h4>
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FZigexnVenturaCoLtd%3Ffref%3Dts&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+      </div>
+      <div id="Gift_SpecialOffer" class="col-sm-8 col-xs-12">
+        <div class="col-xs-6">
+          <h4>ORIGINAL GIFTS</h4>
+          <img class="img-responsive" src="image/gift.png" />
+          <h5>Morbi nunc odio.</h5>
+          <p>Duiuscefeugiatle suada odio. Mor bi nunc odio, gravida. Atcursus nec luctus a.</p>
+          <button>more info</button>
+        </div>
+        <div class="col-xs-6">
+          <h4>SPECIAL OFFERS</h4>
+          <img class="img-responsive" src="image/offer.png"/>
+          <h5>Gravida atcursus.</h5>
+          <p>Duiuscefeugiatle suada odio. Mor bi nunc odio, gravida. Atcursus nec luctus a.</p>
+          <button>more info</button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End Bottom Tab Menu !-->
+</div>
+<!-- End Main !-->
+<div style="background-color:#666 ; opacity: 0.5 ;  width:100%;  height:1px; margin-top:50px;">
+</div>
+
+<div class = "footer-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <h3>Categories</h3>
+        <ul class="col-sm-6">
+          <li><a href="#">New</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Shoes & Accessories</a></li>
+          <li><a href="#">Décor</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+        <ul class="col-sm-6">
+          <li><a href="#">Bride</a></li>
+          <li><a href="#">Bridal Party & Guests</a></li>
+          <li><a href="#">Lingerie</a></li>
+          <li><a href="#">Gifts</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">Specials</a></li>
+          <li><a href="#">New products</a></li>
+          <li><a href="#">Best sellers</a></li>
+          <li><a href="#">Our stores</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Pages configuration</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        <h3>My account</h3>
+        <ul>
+          <li><a href="#">My orders</a></li>
+          <li><a href="#">My merchandise returns</a></li>
+          <li><a href="#">My credit slips</a></li>
+          <li><a href="#">My addresses</a></li>
+          <li><a href="#">My personal info</a></li>
+          <li><a href="#">My vouchers</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <h3>Newsletter</h3>
+        <form action="#" method="get">
+         <input class="input-email" type="text" />
+         <button class="email-enter" >
+           <div class="glyphicon glyphicon-chevron-right"></div>
+         </button>
+       </form>
+       <a href="#">© 2014 Ecommerce software by PrestaShop™</a>
+     </div>
+   </div>
+ </div>
+</div>
+
+</body>
+
+</html>

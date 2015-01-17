@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Test Markdown"
-date:   2015-01-16
+date:   2015-01-17
 tags: instagram
 comments: true
 ---
 # HEADING 1
-## HEADING 2
-### HEADING 3
+##** HEADING 2
+###* HEADING 3
 ***
 [Week1](http://github.com/npdung/Week1)
 

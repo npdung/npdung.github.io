@@ -12,10 +12,10 @@ comments: true
 
 ## IDEA ##
 
-![idea](http://www.axure.com/c/attachments/forum/6-x-newbie-questions/1122d1349212362-want-menu-slide-out-page-mouseenter-mouse-out-sliding-menu.png)
+
 
 ### **We need 2 css "show", "hide"** ###
-![idea1](http://i.imgur.com/47pPZY7.png)
+
 
 ***
 

@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "SLIDE MENU WITH CSS3"
+title:  "Jquery for BEGINNERS"
 date:   2015-01-18
 tags: instagram
 comments: true
 ---
+
 # **SLIDE MENU WITH CSS3** #
 
 ***
@@ -62,6 +63,6 @@ comments: true
 	});
 
 
-<h1>DONE</h1>
+# DONE #
 
 ##[Demo](http://jsfiddle.net/uLeo2wyf/) ##

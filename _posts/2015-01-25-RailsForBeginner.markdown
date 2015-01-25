@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RUBY ON RAILS FOR BEGINNER"
-date:   2015-01-17
+date:   2015-01-25
 tags: instagram
 comments: true
 ---

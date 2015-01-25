@@ -34,10 +34,7 @@ comments: true
 
 ### **A BASIC RUNDOWN ON THE FUNCTION OF EACH OF THE FILES AND FOLDERS** ###
 
-<table>
-<tr>
-<td>File/Folder</td>
-<td>Purpose</td>
-</tr>
-</table>
-
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
